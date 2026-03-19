@@ -127,7 +127,7 @@ android/app/*.jks                  →  Signing keystore
 
 ## ⚖️ Copyright
 ```
-Copyright © 2026 Dipti Choubey. All Rights Reserved.
+Copyright © 2026 Diptanil Sen. All Rights Reserved.
 
 This project and its source code are the intellectual property of Dipti Choubey.
 Unauthorized copying, modification, distribution or use of this code
