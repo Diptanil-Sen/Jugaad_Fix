@@ -177,28 +177,36 @@ class _DetailScreenState extends State<DetailScreen> {
                     padding: const EdgeInsets.symmetric(
                         horizontal: 8, vertical: 4),
                     decoration: BoxDecoration(
-                      color: widget.jugaad.upvotes >= 5
-                          ? Colors.green.withOpacity(0.12)
-                          : Colors.orange.withOpacity(0.12),
-                      borderRadius: BorderRadius.circular(20),
-                      border: Border.all(
-                        color: widget.jugaad.upvotes >= 5
-                            ? Colors.green.withOpacity(0.4)
-                            : Colors.orange.withOpacity(0.4),
-                      ),
+                      color: widget.jugaad.status == 'approved'
+    ? Colors.green.withOpacity(0.12)
+    : widget.jugaad.status == 'rejected'
+        ? Colors.red.withOpacity(0.12)
+        : Colors.orange.withOpacity(0.12),
+borderRadius: BorderRadius.circular(20),
+border: Border.all(
+  color: widget.jugaad.status == 'approved'
+      ? Colors.green.withOpacity(0.4)
+      : widget.jugaad.status == 'rejected'
+          ? Colors.red.withOpacity(0.4)
+          : Colors.orange.withOpacity(0.4),
+),
                     ),
                     child: Text(
-                      widget.jugaad.upvotes >= 5
-                          ? '✅ Verified'
-                          : '⏳ Pending',
-                      style: TextStyle(
-                        fontSize: 10,
-                        fontWeight: FontWeight.w700,
-                        color: widget.jugaad.upvotes >= 5
-                            ? Colors.green
-                            : Colors.orange,
-                      ),
-                    ),
+  widget.jugaad.status == 'approved'
+      ? '✅ Verified'
+      : widget.jugaad.status == 'rejected'
+          ? '❌ Rejected'
+          : '⏳ Pending',
+  style: TextStyle(
+    fontSize: 10,
+    fontWeight: FontWeight.w700,
+    color: widget.jugaad.status == 'approved'
+        ? Colors.green
+        : widget.jugaad.status == 'rejected'
+            ? Colors.red
+            : Colors.orange,
+  ),
+),
                   ),
               ],
             ),

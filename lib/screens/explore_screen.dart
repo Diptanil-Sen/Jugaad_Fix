@@ -309,36 +309,34 @@ class _ExploreScreenState extends State<ExploreScreen> {
                                     ),
                                     const Spacer(),
                                     if (jugaad.isUserCreated)
-                                      Container(
-                                        padding: const EdgeInsets
-                                            .symmetric(
-                                            horizontal: 8,
-                                            vertical: 3),
-                                        decoration: BoxDecoration(
-                                          color: jugaad.upvotes >= 5
-                                              ? Colors.green
-                                                  .withOpacity(0.12)
-                                              : Colors.orange
-                                                  .withOpacity(0.12),
-                                          borderRadius:
-                                              BorderRadius.circular(
-                                                  20),
-                                        ),
-                                        child: Text(
-                                          jugaad.upvotes >= 5
-                                              ? '✅ Verified'
-                                              : '⏳ Pending',
-                                          style: TextStyle(
-                                            fontSize: 10,
-                                            fontWeight:
-                                                FontWeight.w700,
-                                            color:
-                                                jugaad.upvotes >= 5
-                                                    ? Colors.green
-                                                    : Colors.orange,
-                                          ),
-                                        ),
-                                      ),
+  Container(
+    padding: const EdgeInsets.symmetric(
+        horizontal: 8, vertical: 3),
+    decoration: BoxDecoration(
+      color: jugaad.status == 'approved'
+          ? Colors.green.withOpacity(0.12)
+          : jugaad.status == 'rejected'
+              ? Colors.red.withOpacity(0.12)
+              : Colors.orange.withOpacity(0.12),
+      borderRadius: BorderRadius.circular(20),
+    ),
+    child: Text(
+      jugaad.status == 'approved'
+          ? '✅ Verified'
+          : jugaad.status == 'rejected'
+              ? '❌ Rejected'
+              : '⏳ Pending',
+      style: TextStyle(
+        fontSize: 10,
+        fontWeight: FontWeight.w700,
+        color: jugaad.status == 'approved'
+            ? Colors.green
+            : jugaad.status == 'rejected'
+                ? Colors.red
+                : Colors.orange,
+      ),
+    ),
+  ),
                                   ],
                                 ),
                               ],

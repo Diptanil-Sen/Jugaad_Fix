@@ -136,22 +136,22 @@ class _SplashScreenState extends State<SplashScreen>
             ),
           ),
           Positioned(
-            bottom: 20,
-            left: 0,
-            right: 0,
-            child: FadeTransition(
-              opacity: _fadeAnimation,
-              child: Text(
-                'Made with ❤️ by Dipti Choubey',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: 11,
-                  color: Colors.white.withOpacity(0.5),
-                  fontWeight: FontWeight.w500,
-                ),
-              ),
-            ),
-          ),
+  bottom: 20,
+  left: 0,
+  right: 0,
+  child: FadeTransition(
+    opacity: _fadeAnimation,
+    child: Text(
+      '⚡ Har problem ka ek jugaad hota hai!',
+      textAlign: TextAlign.center,
+      style: TextStyle(
+        fontSize: 11,
+        color: Colors.white.withOpacity(0.5),
+        fontWeight: FontWeight.w500,
+      ),
+    ),
+  ),
+),
         ],
       ),
     );

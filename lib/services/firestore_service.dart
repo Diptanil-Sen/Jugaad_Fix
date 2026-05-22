@@ -106,6 +106,7 @@ class FirestoreService {
           createdAt: data['createdAt'] as String?,
           createdByUid: data['createdByUid'] as String?,
           upvotes: data['upvotes'] as int? ?? 0,
+          status: data['status'] as String? ?? 'pending',
         );
       }).toList();
     } catch (e) {
@@ -123,9 +124,9 @@ class FirestoreService {
           (snap.data()?['upvotes'] as int?) ?? 0;
       final newCount = current + 1;
       tx.update(ref, {
-        'upvotes': newCount,
-        if (newCount >= 5) 'status': 'verified',
-      });
+  'upvotes': newCount,
+  if (newCount >= 5) 'status': 'approved',
+});
     });
   }
 

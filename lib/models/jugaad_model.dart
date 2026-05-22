@@ -11,7 +11,8 @@ class Jugaad {
   final String? authorName;
   final bool isUserCreated;
   final String? createdAt;
-  final String? createdByUid;  // NEW — owner's Firebase UID
+  final String? createdByUid;
+  final String? status; // ← NEW
 
   int upvotes;
   bool isBookmarked;
@@ -28,6 +29,7 @@ class Jugaad {
     this.isUserCreated = false,
     this.createdAt,
     this.createdByUid,
+    this.status,
     this.upvotes = 0,
     this.isBookmarked = false,
   });
@@ -35,6 +37,7 @@ class Jugaad {
   Jugaad copyWithState({
     int? upvotes,
     bool? isBookmarked,
+    String? status,
   }) {
     return Jugaad(
       id: id,
@@ -48,6 +51,7 @@ class Jugaad {
       isUserCreated: isUserCreated,
       createdAt: createdAt,
       createdByUid: createdByUid,
+      status: status ?? this.status,
       upvotes: upvotes ?? this.upvotes,
       isBookmarked: isBookmarked ?? this.isBookmarked,
     );
@@ -66,6 +70,7 @@ class Jugaad {
       'isUserCreated': isUserCreated,
       'createdAt': createdAt,
       'createdByUid': createdByUid,
+      'status': status,
       'upvotes': upvotes,
       'isBookmarked': isBookmarked,
     };
@@ -84,6 +89,7 @@ class Jugaad {
       isUserCreated: json['isUserCreated'] as bool? ?? false,
       createdAt: json['createdAt'] as String?,
       createdByUid: json['createdByUid'] as String?,
+      status: json['status'] as String?,
       upvotes: json['upvotes'] as int? ?? 0,
       isBookmarked: json['isBookmarked'] as bool? ?? false,
     );

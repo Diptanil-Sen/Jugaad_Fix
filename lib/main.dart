@@ -14,7 +14,15 @@ import 'package:jugaad_fix/screens/detail_screen.dart';
 import 'package:jugaad_fix/screens/splash_screen.dart';
 import 'package:jugaad_fix/services/storage_service.dart';
 import 'package:jugaad_fix/services/notification_service.dart';
+import 'package:jugaad_fix/screens/admin_screen.dart';
 
+
+// 🔴 Change this to YOUR email
+// 🔴 Admin emails — both have full access
+const List<String> kAdminEmails = [
+  'diptichoubey101@gmail.com',
+  'diptanilsen10@gmail.com',
+];
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -162,6 +170,9 @@ class _MainAppState extends State<_MainApp> {
   int _currentIndex = 0;
   String _selectedCategoryKey = '';
 
+  bool get _isAdmin =>
+      kAdminEmails.contains(FirebaseAuth.instance.currentUser?.email);
+
   void _onCategorySelected(String categoryKey) {
     setState(() {
       _selectedCategoryKey = categoryKey;
@@ -218,20 +229,20 @@ class _MainAppState extends State<_MainApp> {
             ],
           ),
           Container(
-            width: double.infinity,
-            padding: const EdgeInsets.symmetric(vertical: 5),
-            color: const Color(0xFF110806),
-            child: const Text(
-              'Made with ❤️ by Dipti Choubey',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 10,
-                color: Color(0xFFFF6B00),
-                fontWeight: FontWeight.w600,
-                letterSpacing: 0.5,
-              ),
-            ),
-          ),
+  width: double.infinity,
+  padding: const EdgeInsets.symmetric(vertical: 5),
+  color: const Color(0xFF110806),
+  child: const Text(
+    '⚡ Har problem ka ek jugaad hota hai!',
+    textAlign: TextAlign.center,
+    style: TextStyle(
+      fontSize: 10,
+      color: Color(0xFFFF6B00),
+      fontWeight: FontWeight.w600,
+      letterSpacing: 0.5,
+    ),
+  ),
+),
         ],
       ),
     );
@@ -529,25 +540,44 @@ class _MainAppState extends State<_MainApp> {
                       }
                     },
                   ),
+                  // ── Admin Panel tile (only visible to admins) ──
+                  if (_isAdmin) ...[
+                    Divider(height: 1, color: primary.withOpacity(0.1)),
+                    _settingsTile(
+                      icon: Icons.admin_panel_settings_rounded,
+                      title: '🛡️ Admin Panel',
+                      subtitle: 'Pending jugaads verify karo',
+                      color: Colors.deepPurple,
+                      textColor: textColor,
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (_) => const AdminScreen(),
+                          ),
+                        );
+                      },
+                    ),
+                  ],
                   Divider(height: 1, color: primary.withOpacity(0.1)),
-                 _settingsTile(
-  icon: Icons.logout_rounded,
-  title: 'Logout',
-  subtitle: 'Sign out of your account',
-  color: Colors.red,
-  textColor: textColor,
-  onTap: () async {
-    await FirebaseAuth.instance.signOut();
-    if (mounted) {
-      Navigator.of(context).pushAndRemoveUntil(
-        MaterialPageRoute(
-          builder: (_) => const LoginScreen(),
-        ),
-        (route) => false,
-      );
-    }
-  },
-),
+                  _settingsTile(
+                    icon: Icons.logout_rounded,
+                    title: 'Logout',
+                    subtitle: 'Sign out of your account',
+                    color: Colors.red,
+                    textColor: textColor,
+                    onTap: () async {
+                      await FirebaseAuth.instance.signOut();
+                      if (mounted) {
+                        Navigator.of(context).pushAndRemoveUntil(
+                          MaterialPageRoute(
+                            builder: (_) => const LoginScreen(),
+                          ),
+                          (route) => false,
+                        );
+                      }
+                    },
+                  ),
                 ],
               ),
             ),
@@ -555,7 +585,7 @@ class _MainAppState extends State<_MainApp> {
             const SizedBox(height: 24),
 
             Text(
-              'Made with ❤️ in India\nBy Dipti Choubey',
+              '⚡ Har problem ka ek jugaad hota hai!',
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 12,
