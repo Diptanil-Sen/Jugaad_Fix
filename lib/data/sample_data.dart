@@ -2,7 +2,6 @@ import 'package:jugaad_fix/models/jugaad_model.dart';
 
 class JugaadCategories {
   static const allKey = 'all';
-  
 
   static const categories = <Map<String, String>>[
     {'key': 'power', 'label': 'Power Cut', 'emoji': '🔌'},
