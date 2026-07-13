@@ -5,7 +5,6 @@ import 'package:share_plus/share_plus.dart';
 import 'package:jugaad_fix/models/jugaad_model.dart';
 import 'package:jugaad_fix/services/firestore_service.dart';
 
-
 class DetailScreen extends StatefulWidget {
   const DetailScreen({
     super.key,
