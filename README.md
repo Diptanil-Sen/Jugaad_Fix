@@ -45,22 +45,22 @@ Explore the key features and user interface of **Jugaad Fix** through the screen
 
 | 🏠 Home | 🤖 AI Jugaad Suggester |
 |:-------:|:----------------------:|
-| <img src="assets/screenshots/home.png" alt="Home Screen" width="280"/> | <img src="assets/screenshots/ai_suggester.png" alt="AI Jugaad Suggester" width="280"/> |
+| <img src="assets/screenshots/1.home.png" alt="Home Screen" width="280"/> | <img src="assets/screenshots/2.ai_suggester.png" alt="AI Jugaad Suggester" width="280"/> |
 | Browse trending jugaads, discover community solutions, and navigate across the application. | Describe your problem in Hinglish and receive AI-powered practical solutions. |
 
 | 🔍 Explore Page | 🔖 Saved Jugaads |
 |:---------------:|:----------------:|
-| <img src="assets/screenshots/explore_page.png" alt="Explore Page" width="280"/> | <img src="assets/screenshots/saved_jugadds.png" alt="Saved Jugaads" width="280"/> |
+| <img src="assets/screenshots/3.explore_page.png" alt="Explore Page" width="280"/> | <img src="assets/screenshots/4.saved_jugadds.png" alt="Saved Jugaads" width="280"/> |
 | Explore verified jugaads shared by the community across different categories. | Access your bookmarked and favourite jugaads anytime. |
 
 | 📤 Submit Jugaad | 👤 Profile |
 |:----------------:|:----------:|
-| <img src="assets/screenshots/submit_jugaad.png" alt="Submit Jugaad" width="280"/> | <img src="assets/screenshots/profile.png" alt="Profile" width="280"/> |
+| <img src="assets/screenshots/5.submit_jugaad.png" alt="Submit Jugaad" width="280"/> | <img src="assets/screenshots/6.profile.png" alt="Profile" width="280"/> |
 | Share your own innovative jugaads with the community for review and publication. | View your profile, activity, likes, saved posts, and contribution statistics. |
 
 | ⚙️ Profile Settings | 🛡️ Admin Panel |
 |:-------------------:|:--------------:|
-| <img src="assets/screenshots/profile_settings.png" alt="Profile Settings" width="280"/> | <img src="assets/screenshots/admin_panel.png" alt="Admin Panel" width="280"/> |
+| <img src="assets/screenshots/7.profile_settings.png" alt="Profile Settings" width="280"/> | <img src="assets/screenshots/8.admin_panel.png" alt="Admin Panel" width="280"/> |
 | Manage account settings, AI tools, theme, notifications, and application preferences. | Verify community submissions and manage pending jugaads through the administrator dashboard. |
 ---
 
