@@ -159,4 +159,4 @@ If you enjoyed this project or found it useful, consider giving it a **Star ⭐*
 
 ---
 
-**Made with ❤️ using Flutter, Firebase, and Dart.**
+**Made using Flutter, Firebase, and Dart.**
