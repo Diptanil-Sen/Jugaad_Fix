@@ -50,7 +50,7 @@ Explore the key features and user interface of **Jugaad Fix** through the screen
 
 | 🔍 Explore Page | 🔖 Saved Jugaads |
 |:---------------:|:----------------:|
-| <img src="assets/screenshots/3.explore_page.png" alt="Explore Page" width="280"/> | <img src="assets/screenshots/4.saved_jugadds.png" alt="Saved Jugaads" width="280"/> |
+| <img src="assets/screenshots/3.explore_page.png" alt="Explore Page" width="280"/> | <img src="assets/screenshots/4.saved_jugaads.png" alt="Saved Jugaads" width="280"/> |
 | Explore verified jugaads shared by the community across different categories. | Access your bookmarked and favourite jugaads anytime. |
 
 | 📤 Submit Jugaad | 👤 Profile |
